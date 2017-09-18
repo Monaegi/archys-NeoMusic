@@ -21,6 +21,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 CONFIG_SECRET_DIR = os.path.join(ROOT_DIR, '.config_secret')
 CONFIG_SECRET_COMMON_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_common.json')
 CONFIG_SECRET_DEBUG_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_debug.json')
+CONFIG_SECRET_DEPLOY_FILE = os.path.join(CONFIG_SECRET_DIR, 'settings_deploy.json')
 
 # config_secret 변수에 CONFIG_SECRET_COMMON_FILE 경로의 파일을 읽은 값을 할당
 config_secret_common = json.loads(open(CONFIG_SECRET_COMMON_FILE).read())

@@ -2,7 +2,7 @@ from .base import *
 
 config_secret_debug = json.loads(open(CONFIG_SECRET_DEBUG_FILE).read())
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: DEBUG_MODE
 DEBUG = True
 ALLOWED_HOSTS = config_secret_debug['django']['allowed_hosts']
 
@@ -10,7 +10,7 @@ ALLOWED_HOSTS = config_secret_debug['django']['allowed_hosts']
 INSTALLED_APPS.append('django_extensions')
 
 # WSGI application
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.debug.application'
 
 # STATIC URLS
 STATIC_URL = '/static/'
